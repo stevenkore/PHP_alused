@@ -39,6 +39,20 @@ if($arv1 >= 0 and $arv1 < 25){
     echo '<div style="color: black">'.$arv1.'</div>';
 }
 ?>
+<?php
+// tingimuslaused
+/*
+ * switch (kontroll){
+ *      case vastus:
+ *          tegevused, mis antud case puhul toimivad
+ *          break;
+ *      default:
+ *          tegevused, mis toimuvad siis kui kõik muu
+ *          ei sobi
+ *          break
+ * }
+ * */
+?>
 
     <style>
         div{
