@@ -13,7 +13,7 @@ print('PHP alused<br>');
 echo 'nii toimub väljastamine<br>';
 echo 'Tere<br>';
 // väärtuste ühendamine
-echo 'See '.'on'.' kolmest sõnast kokku pantud<br>'; 
+echo 'See '.'on'.' kolmest sõnast kokku pantud<br>';
 
 
 
