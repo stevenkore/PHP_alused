@@ -24,3 +24,33 @@ echo gettype($string);
 $summa = $taisarv . $taisarv;
 echo gettype($summa);
 echo '<br>Summa = '.$summa.'<br>';
+
+
+?>
+
+<?php
+// operaatorid
+
+$arv1 = 42;
+$arv2 = 11;
+
+echo '<h4>Matemaatilised operaatorid</h4>';
+
+echo $arv1.' - '.$arv2.' = '.($arv1 + $arv2).'<br>';
+echo $arv1.' - '.$arv2.' = '.($arv1 - $arv2).'<br>';
+echo $arv1.' * '.$arv2.' = '.($arv1 * $arv2).'<br>';
+echo $arv1.' / '.$arv2.' = '.($arv1 / $arv2).'<br>';
+echo $arv1.' % '.$arv2.' = '.($arv1 % $arv2).'<br>';
+
+echo '<hr>';
+
+echo '<h4>Võrdlus operaatorid</h4>';
+
+echo $arv1.' < '.$arv2.' see on '.($arv1 < $arv2).'<br>';
+echo $arv1.' > '.$arv2.' see on '.($arv1 > $arv2).'<br>';
+echo $arv1.' <= '.$arv2.' see on '.($arv1 <= $arv2).'<br>';
+echo $arv1.' >= '.$arv2.' see on '.($arv1 >= $arv2).'<br>';
+echo $arv1.' == '.$arv2.' see on '.($arv1 == $arv2).'<br>';
+echo $arv1.' != '.$arv2.' see on '.($arv1 != $arv2).'<br>';
+
+?>
