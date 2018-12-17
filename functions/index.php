@@ -51,6 +51,38 @@ function meaningOfLife()
 meaningOfLife();
 
 echo 'Näide 8<br><br>';
+$num_of_calls = 0;
+function andAnotherThing($txt) {
+    global $num_of_calls;
+    $num_of_calls++;
+    print '<h1>'.$num_of_calls.'. '.$txt.'</h1>';
+}
+andAnotherThing('Widgets');
+print ('We build a fine range of widgets');
+andAnotherThing('Doodads');
+print ('Finest in the world<hr>');
+
+echo 'Näide 9<br><br>';
+function fontWrap( $txt, $size) {
+    echo '<font size='.$size.' face=\'Helvetica,Arial,Sans-Serif\'>'.$txt.'</font>';
+}
+fontWrap('A heading<br>',5);
+fontWrap('Some body text<br>',3);
+fontWrap('Some more body text<br>',3);
+fontWrap('Yet more body text<br>',3);
+echo '<hr>';
+
+echo 'Näide 10<br><br>';
+function addFive(&$num)
+{
+    $num += 5;
+}
+$orignum = 10;
+
+addFive($orignum);
+print($orignum);
+
+echo '<hr>';
 
 
 ?>
