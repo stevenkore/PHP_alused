@@ -78,3 +78,57 @@ echo '<pre>';
 print_r($kasutajad);
 echo '</pre>';
 ?>
+
+<?php
+$kasutajad = array(
+    array(
+        'alice',
+        'Alice',
+        'Liddle'
+    ),
+    array(
+        'bob',
+        'Bob',
+        'Builder'
+    )
+);
+echo '<hr>';
+foreach ($kasutajad as $kasutaja){
+    foreach ($kasutaja as $element){
+        echo $element.'<br>';
+    }
+    echo '<hr>';
+}
+?>
+
+<?php
+
+$kasutajad = array(
+    array(
+        'alice',
+        'Alice',
+        'Liddle',
+        'Female'
+    ),
+    array(
+        'bob',
+        'Bob',
+        'Builder',
+        'Male'
+    )
+);
+
+foreach ($kasutajad as $kasutaja){
+    for($i = 0; $i < count($kasutaja); $i++){
+        if($kasutaja[3] == 'female'){
+        echo '<div style="color: red">';
+        } else {
+            echo '<div style="color: blue">';
+        }
+        echo $kasutaja[$i].'</div>';
+    }
+}
+echo '<hr>';
+?>
+
+
