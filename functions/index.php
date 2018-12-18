@@ -87,8 +87,13 @@ echo '<hr>';
 
 ?>
 
-
-
+<style>
+    table, tr, td{
+        border: solid 2px black;
+        border-collapse: collapse;
+        padding: 3px;
+    }
+</style>
 <?php
 
 echo 'Ülesanne 1<br><br>';
