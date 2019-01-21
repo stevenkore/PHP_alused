@@ -1,6 +1,5 @@
 <h1>Tellimine</h1>
 <?php
-
 //lisab vormist saadud andmed muutujasse
 $toode1 = $_GET['t1'];
 $toode2 = $_GET['t2'];
