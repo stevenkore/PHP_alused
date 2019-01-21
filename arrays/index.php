@@ -1,134 +1,164 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: steven.kore
- * Date: 18.12.2018
- * Time: 14:43
- */
-
 $kasutajad = array(
     'alice',
     'bob',
     'lucy'
 );
-
 for($i = 0; $i < count($kasutajad); $i++){
     echo $i.' - '.$kasutajad[$i].'<br>';
 }
-?>
-<?php
-
-$kasutajad = array();
-
-$kasutajad[] = 'alice';
-$kasutajad[] = 'bob';
-
-array_push($kasutajad, 'lucy');
-// var_dump($kasutajad);
-
-foreach($kasutajad as $kasutaja) {
-    echo $kasutaja.'<br>';
-}
-
-echo '<hr>';
-array_shift($kasutajad); //lükkab esimese välja
-array_pop($kasutajad); //lükkab teise välja
-
-foreach($kasutajad as $kasutaja) {
-    echo $kasutaja.'<br>';
-}
-
-echo '<hr>';
-
-?>
-<?php
-
-$kasutajad = array();
-$kasutajad[] = 'alice';
-$kasutajad[] = 'bob';
-array_push($kasutajad, 'lucy');
-echo '<pre>';
-var_dump($kasutajad);
-echo '</pre>';
-
-echo '<hr>';
-
-echo '<pre>';
-print_r($kasutajad);
-echo '</pre>';
-
-?>
-
-<?php
-echo '<hr>';
-$kasutajad = array(
-    array(
-        'alice',
-        'Alice',
-        'Liddle'
-    ),
-    array(
-        'bob',
-        'Bob',
-        'Builder'
-    )
-);
-echo '<hr>';
-echo '<pre>';
-print_r($kasutajad);
-echo '</pre>';
-?>
-
-<?php
-$kasutajad = array(
-    array(
-        'alice',
-        'Alice',
-        'Liddle'
-    ),
-    array(
-        'bob',
-        'Bob',
-        'Builder'
-    )
-);
 echo '<hr>';
 foreach ($kasutajad as $kasutaja){
-    foreach ($kasutaja as $element){
-        echo $element.'<br>';
-    }
-    echo '<hr>';
+    echo $kasutaja.'<br>';
 }
-?>
-
-<?php
-
-$kasutajad = array(
+echo '<hr>';
+// Tühi array, kuhu hiljem saab andmeid sisestada
+$kasutajad2 = array();
+$kasutajad2[] = 'alice';
+$kasutajad2[] = 'bob';
+array_push($kasutajad2, 'lucy');
+foreach ($kasutajad2 as $kasutaja2){
+    echo $kasutaja2.'<br>';
+}
+// Eemaldamine massiivi tagant ja eest
+echo '<hr>';
+array_pop($kasutajad2);
+array_shift($kasutajad2);
+foreach ($kasutajad2 as $kasutaja2){
+    echo $kasutaja2.'<br>';
+}
+echo '<hr>';
+// Andmete vaatamine
+var_dump($kasutajad);
+echo '<br>';
+print_r($kasutajad);
+echo '<pre>';
+print_r($kasutajad);
+echo '</pre>';
+echo '<hr>';
+// Sorteerime viimasest alates (r)
+rsort($kasutajad);
+echo '<pre>';
+print_r($kasutajad);
+echo '</pre>';
+echo '<hr>';
+// Kahemõõtmeline massiiv
+$kasutajad3 = array(
     array(
         'alice',
         'Alice',
         'Liddle',
-        'Female'
+        'female'
     ),
     array(
         'bob',
         'Bob',
         'Builder',
-        'Male'
-    )
+        'male'
+    ),
 );
+echo '<pre>';
+print_r($kasutajad3);
+echo '</pre>';
+// Värvi lisamine soole
+foreach ($kasutajad3 as $kasutaja3){
 
-foreach ($kasutajad as $kasutaja){
-    for($i = 0; $i < count($kasutaja); $i++){
-        if($kasutaja[3] == 'female'){
-        echo '<div style="color: red">';
-        } else {
-            echo '<div style="color: blue">';
+    if ($kasutaja3[3] == 'male') {
+        foreach ($kasutaja3 as $sisuelement) {
+            echo '<div style="background-color: blue">' . $sisuelement . '</div>';
         }
-        echo $kasutaja[$i].'</div>';
+
+    } else if ($kasutaja3[3] == 'female') {
+        foreach ($kasutaja3 as $sisuelement) {
+            echo '<div style="background-color: red">' . $sisuelement . '</div>';
+        }
+
+    } else {
+        foreach ($kasutaja3 as $sisuelement) {
+            echo '<div style="background-color: green">' . $sisuelement . '</div>';
+        }
+    }
+    echo '<hr>';
+}
+// Eelmiste andmete näitamine tabelis
+
+echo '<table>';
+echo '<tr>
+        <th>Kasutaja</th>
+        <th>Eesnimi</th>
+        <th>Perenimi</th>
+        <th>sugu</th>
+     </tr>';
+foreach ($kasutajad3 as $kasutaja3){
+    echo '<tr>';
+
+    if ($kasutaja3[3] == 'male') {
+        foreach ($kasutaja3 as $sisuelement) {
+            echo '<td style="background-color: blue">' . $sisuelement . '</td>';
+        }
+
+    } else if ($kasutaja3[3] == 'female') {
+        foreach ($kasutaja3 as $sisuelement) {
+            echo '<td style="background-color: red">' . $sisuelement . '</td>';
+        }
+
+    } else {
+        foreach ($kasutaja3 as $sisuelement) {
+            echo '<td style="background-color: green">' . $sisuelement . '</td>';
+        }
     }
 }
-echo '<hr>';
 ?>
 
+    <!--- Andmestruktuuri loomine mitmemõõtmelise massiivi kasutamisega --->
 
+    <html>
+    <head>
+        <title>listing 7.1</title>
+    </head>
+    <body>
+
+    <?php
+    $characters = array (
+        array (
+            name =>"bob",
+            occupation =>"superhero",
+            age =>30,
+            speciality =>"x-ray vision"),
+        array (
+            name =>"sally",
+            occupation =>"superhero",
+            age =>24,
+            speciality =>"superstrength"),
+        array (
+            name =>"mary",
+            occupation =>"villain",
+            age =>63,
+            speciality =>"nanotech")
+    );
+    foreach ($characters as $val)
+    {
+        foreach ($val as $key=>$final_val)
+        {
+            print '$key: $final_val<br>';
+        }
+        print '<br>';
+    }
+    ?>
+
+    </body>
+    </html>
+
+<?php
+
+
+$first = array('a','b','c');
+$second = array(1, 2, 3);
+$third = array_merge($first, $second);
+foreach ($third as $val)
+{
+    print '$val<br>';
+}
+
+
+?>
