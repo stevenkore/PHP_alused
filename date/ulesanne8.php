@@ -69,14 +69,68 @@ $paev1=$eesti_paevad[date('n')];
 $kuu = $eesti_kuud[date('n')];
 $aasta = date('Y');
 //kuupäeva väljastamine
+
 echo $paev.'.'.$kuu.' '.$aasta.' '.$paev1;	//21.jaanuar 2019
 echo "<hr><br>";
-// järgimise jaanipäevani
+
+// Järgmine jaanip2ev
 
 $d1=strtotime("June 24");
-
 $d2=ceil(($d1-time())/60/60/24);
-
 echo "Järgmise Jaanipäevani on " . $d2 ." päeva";
+echo "<hr><br>";
 
-echo "<br>";
+//sünnipeäva arvutamine
+
+$userDob = '1980-06-11';
+$userDob2 = '1996-04-18';
+
+// date time infost mis on üleval
+
+$dob = new DateTime($userDob);
+$dob2 = new DateTime($userDob2);
+
+// võrdlemine hetke kuupäeva ja sünnipäevaga
+
+$now = new DateTime();
+$now2 = new DateTime();
+
+// vahe sünnipäeval ja hetke kuupäeval
+
+$difference = $now->diff($dob);
+$difference2 = $now2->diff($dob2);
+//tema vanus, minu vanus ja vahe.
+
+$age = $difference->y;
+$age2 = $difference2->y;
+$vahe = $age - $age2;
+
+//Print
+
+echo "Võrreldav inimene: " . $age. "aastat";
+echo "<hr><br>";
+echo "Minu vanus: ". $age2. "aastat";
+echo "<hr><br>";
+echo "Meie vanuse vahe: ".$vahe. "aastat";
+echo "<hr><br>";
+//Juubel
+
+echo "Ütleb kas on juubel või ei";
+echo "<hr><br>";
+$vanus = '19';
+$juubel = $vanus + '1';
+if ($juubel == 20){
+    echo "Jah on juubel";
+}
+else if ($juubel == 21)
+{
+    echo 'Ei ole juubel';
+}
+$aeg = new Date();
+$tund = now.getHours();
+if ($tund > 0) $s6num = "edu";
+if ($tund > 6) $s6num = "edu";
+if ($tund > 12) $s6num = "edu";
+if ($tund > 17) $s6num = "edu";
+if ($tund > 22) $s6num = "edu";
+echo $s6num;
