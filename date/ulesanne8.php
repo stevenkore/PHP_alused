@@ -23,6 +23,7 @@ Leia, kas sul on järgmine aasta juubel?
 
 Koosta kood, mis tervitab sind vastavalt ajale. N: 8:00+ “Tere hommikust!”, 13:00+ “Tere päevast!” ja 17:00+ “Tere õhtust!”
  */
+
 echo time(); //1548066443
 echo"<hr>";
 echo date('d.m.Y G:i' , time());	//21.01.2019 11:12
@@ -63,9 +64,19 @@ echo "<hr>";
 $sp = mktime(12,31,0,03,20,2013);
 echo date('d.m.Y G:i', $sp);
 echo "<hr>";
-$eesti_paevad = array(1=>'esmasp', 'teisip', 'kolmap', 'neljap', 'reede', 'laup', 'pyhap');
+$eesti_paevad = array(1=>'esmaspäev', 'teisipäev', 'kolmapäev', 'neljapäev', 'reede', 'laupäev', 'pühapäev');
 $paev1=$eesti_paevad[date('n')];
 $kuu = $eesti_kuud[date('n')];
 $aasta = date('Y');
 //kuupäeva väljastamine
 echo $paev.'.'.$kuu.' '.$aasta.' '.$paev1;	//21.jaanuar 2019
+echo "<hr><br>";
+// järgimise jaanipäevani
+
+$d1=strtotime("June 24");
+
+$d2=ceil(($d1-time())/60/60/24);
+
+echo "Järgmise Jaanipäevani on " . $d2 ." päeva";
+
+echo "<br>";
