@@ -61,7 +61,7 @@ $paev1=$eesti_paevad[date('n')];
 $kuu = $eesti_kuud[date('n')];
 $aasta = date('Y');
 //kuupäeva väljastamine
-echo $paev.'.'.$kuu.' '.$aasta.' '.$paev1;	//21.jaanuar 2019
+echo $paev.'.'.$kuu.' '.$aasta.' '.$paev1;	//29.jaanuar 2019
 echo "<hr><br>";
 // Järgmine jaanip2ev
 $d1=strtotime("June 24");
@@ -94,12 +94,12 @@ echo "<hr><br>";
 //Juubel
 echo "Ütleb kas on juubel või ei";
 echo "<hr><br>";
-$vanus = '19';
+$vanus = '22';
 $juubel = $vanus + '1';
-if ($juubel == 20){
+if ($juubel == 22){
     echo "Jah on juubel";
 }
-else if ($juubel == 21)
+else if ($juubel == 23)
 {
     echo 'Ei ole juubel';
 }
