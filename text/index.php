@@ -95,3 +95,14 @@ $tekst = 'Musta lehma saba musta lehma taga, valge lehma saba valge lehma taga';
 $otsi = array('lehm', 'saba', 'taga');
 $asenda = array('koer', 'sarv', 'ees');
 echo str_replace($otsi, $asenda, $tekst);
+echo '<hr><br><br>';
+echo '1. Kasutaja lisab vormi nime, seda näiteks suured ja väikesed tähed läbisegi.
+Sina kood tervitab teda kenasti nimepidi, kus nimi algab suure algustähega.
+Näiteks: sisend–>mARiO; väljund–>Tere, Mario!';
+echo '<br><br>';
+$mario_nimi = 'mARIO';
+echo 'Tere, ' . ucfirst(strtolower($mario_nimi)) . '!';
+echo '<br><br>';
+
+
+
