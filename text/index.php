@@ -110,6 +110,25 @@ echo '<br><br>';
 $stalker = 'stalker';
 $stalker_array = (str_split($stalker));
 echo strtoupper(implode('.', $stalker_array));
-echo '<br>';
+echo '<br><br>';
+echo '3. Koosta tekstiväli, mis kuvab kasutaja sisestatud sõnumeid. Kasutaja ropud sõnad asendatakse tärnidega.
+Näiteks: sisend–>Sa oled täielik noob; väljund–>Sa oled täielik ***';
+?>
+<html>
+<br><br>
+<form method="get">
+    <input name="message" type="text">
+    <button type="submit">Saada</button>
+</form>
+
+<br>
+</html>
+<?php
+$message = $_GET['message'];
+$roppused = array('savi', 'loll', 'taun', 'noob');
+$tarnid = '****';
+echo str_replace($roppused, $tarnid, $message) . '<br>';
+
+
 ?>
 
