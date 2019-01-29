@@ -104,5 +104,12 @@ $mario_nimi = 'mARIO';
 echo 'Tere, ' . ucfirst(strtolower($mario_nimi)) . '!';
 echo '<br><br>';
 
-
+echo '2. Kuna on teada, et PHP käsitleb teksti kui massiivi, siis peaks saama seda tsükli abil nö. tükeldada. Ülesandeks on etteantud teksti iga tähe järgi lisada punkt.
+Näiteks: sisend–>stalker; väljund–>S.T.A.L.K.E.R.';
+echo '<br><br>';
+$stalker = 'stalker';
+$stalker_array = (str_split($stalker));
+echo strtoupper(implode('.', $stalker_array));
+echo '<br>';
+?>
 
